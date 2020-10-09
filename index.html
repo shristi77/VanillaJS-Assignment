@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <script>
+        const students= [
+            {rollno:'1', name:'M.S. Dhoni', emailId:'dhoni@gmail.com'},
+            {rollno:'2', name:'Virat kolhi', emailId:'dhoni@gmail.com'},
+            {rollno:'3', name:'Sachin tendulkar', emailId:'dhoni@gmail.com'},
+            {rollno:'4', name:'Ram verma', emailId:'dhoni@gmail.com'},
+            {rollno:'5', name:'Shyam sharma', emailId:'dhoni@gmail.com'},
+            {rollno:'6', name:'Sita chaudhary', emailId:'dhoni@gmail.com'},
+            {rollno:'7', name:'Geeta Dhoni', emailId:'dhoni@gmail.com'},
+            {rollno:'8', name:'Meeta Dhoni', emailId:'dhoni@gmail.com'},
+            {rollno:'9', name:'Max Verma', emailId:'dhoni@gmail.com'},
+            {rollno:'10', name:'Manu Sharma', emailId:'dhoni@gmail.com'}
+        ];
+     	const listObj = new List(document.getElementById('1'), students);
+     	listObj.render();
+    </script>
+    <style>
+        .main {
+            border: 1px solid red;
+            float:left;
+            width:100%;
+            padding:0 0px;
+            margin: 0px;
+            
+        }
+        .section{
+            float: left;
+            border: 2px solid black;
+            /* margin: ; */
+            padding: 20px 20px;
+            width: 30%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="section">Roll no.</div>
+            <div class="section">Name</div>
+            <div class="section">Email Id</div>
+        </div>
+    </header>
+    <div class="main">
+        <div class="section" id="rollno"></div>
+        <div class="section" id="name"></div>
+        <div class="section" id="emailId"></div>
+    </div>
+    <footer>
+        <div>
+            <span><button onclick="navigateFirst()"><<=</button></span>
+            <span><button onclick="navigatePrev()"><-</button></span>            
+            <span><input type="text" id="currentRoll"></span>            
+            <span><button onclick="navigateNext()">-></button></span>
+            <span><button onclick="navigateLast()">=>></button></span>
+            
+            <select name="cars" id="cars" >
+                <option value="1" id="1">1</option>
+                <option value="2" id="2">2</option>
+                <option value="3" id="3">3</option>
+                <option value="4" id="4">4</option>
+                <option value="5" id="5">5</option>
+                <option value="6" id="6">6</option>
+                <option value="7" id="7">7</option>
+                <option value="8" id="8">8</option>
+                <option value="9" id="9">9</option>
+                <option value="10" id="10">10</option>
+              </select>
+              
+        </div>
+    </footer>
+
+</body>
+</html>
