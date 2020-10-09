@@ -16,22 +16,22 @@ const List = function(element, listItems){
         }
 	};
 	this.navigateFirst = function(){
-        this.currentPage=1;
+        this.currentPage = 1;
         document.getElementById("currentRoll").value = this.currentPage;
-        this.render();
+        this.render();  
     };
 	this.navigateLast = function(){
-        this.currentPage=10;
+        this.currentPage = 10;
         document.getElementById("currentRoll").value = this.currentPage;
         this.render();
     };
 	this.navigatePrev = function(){
-        this.currentPage=this.currentPage-1;
+        this.currentPage=this.currentPage - 1;
         document.getElementById("currentRoll").value = this.currentPage;
         this.render();
     };
 	this.navigateNext = function(){
-        this.currentPage= this.currentPage+1;
+        this.currentPage= this.currentPage + 1;
         document.getElementById("currentRoll").value = this.currentPage;
         this.render();
     };
