@@ -4,78 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="./index.js"></script>
-    <script>
-        const students= [
-            {rollno:'1', name:'M.S. Dhoni', emailId:'dhoni@gmail.com'},
-            {rollno:'2', name:'Virat kolhi', emailId:'dhoni@gmail.com'},
-            {rollno:'3', name:'Sachin tendulkar', emailId:'dhoni@gmail.com'},
-            {rollno:'4', name:'Ram verma', emailId:'dhoni@gmail.com'},
-            {rollno:'5', name:'Shyam sharma', emailId:'dhoni@gmail.com'},
-            {rollno:'6', name:'Sita chaudhary', emailId:'dhoni@gmail.com'},
-            {rollno:'7', name:'Geeta Dhoni', emailId:'dhoni@gmail.com'},
-            {rollno:'8', name:'Meeta Dhoni', emailId:'dhoni@gmail.com'},
-            {rollno:'9', name:'Max Verma', emailId:'dhoni@gmail.com'},
-            {rollno:'10', name:'Manu Sharma', emailId:'dhoni@gmail.com'}
-        ];
-     	const listObj = new List(document.getElementById('1'), students);
-     	listObj.render();
-    </script>
-    <style>
-        .main {
-            border: 1px solid red;
-            float:left;
-            width:100%;
-            padding:0 0px;
-            margin: 0px;
-            
-        }
-        .section{
-            float: left;
-            border: 2px solid black;
-            /* margin: ; */
-            padding: 20px 20px;
-            width: 30%;
-            height: 100%;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./list.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="section">Roll no.</div>
-            <div class="section">Name</div>
-            <div class="section">Email Id</div>
-        </div>
-    </header>
-    <div class="main">
-        <div class="section" id="rollno"></div>
-        <div class="section" id="name"></div>
-        <div class="section" id="emailId"></div>
-    </div>
-    <footer>
-        <div>
-            <span><button onclick="navigateFirst()"><<=</button></span>
-            <span><button onclick="navigatePrev()"><-</button></span>            
-            <span><input type="text" id="currentRoll"></span>            
-            <span><button onclick="navigateNext()">-></button></span>
-            <span><button onclick="navigateLast()">=>></button></span>
-            
-            <select name="cars" id="cars" >
-                <option value="1" id="1">1</option>
-                <option value="2" id="2">2</option>
-                <option value="3" id="3">3</option>
-                <option value="4" id="4">4</option>
-                <option value="5" id="5">5</option>
-                <option value="6" id="6">6</option>
-                <option value="7" id="7">7</option>
-                <option value="8" id="8">8</option>
-                <option value="9" id="9">9</option>
-                <option value="10" id="10">10</option>
-              </select>
-              
-        </div>
-    </footer>
+    <table class="table border mx-auto my-auto" style="width: 1200px; height:auto">
+        <thead class="thead-dark">
+            <th scope="col">RollNo.</th>
+            <th scope="col">Name</th>
+            <th scope="col">EmailID</th>
+        </thead>
+        <tbody id="body">
+        </tbody>
+    </table>
+    <div id="buttons" class="mx-auto my-auto" style="width: 1200px; height:800px;">
+        <button id="first" type="button" class="btn btn-outline-dark"><<<=</button>
+        <button id="prev" type="button" class="btn btn-outline-dark"><=</button>
+        <button id="pageNo" type="button" class="btn btn-outline-dark"></button>
+        <button id="next" type="button" class="btn btn-outline-dark">=></button>
+        <button id="last" type="button" class="btn btn-outline-dark">=>>></button>
 
+        <span id="space"></span>
+        <select id="dropdown" >
+            <option value="3" class="dropdown-item">3</option>
+            <option value="5" class="dropdown-item">5</option>
+            <option value="7" class="dropdown-item">7</option>
+            <option value="10" class="dropdown-item">10</option>
+            <option value="12" class="dropdown-item">12</option>
+        </select>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
